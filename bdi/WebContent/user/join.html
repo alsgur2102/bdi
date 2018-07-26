@@ -37,22 +37,48 @@
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2"><button type="button" onclick="alert(1)"> 회원가입 </button></td>
+				<td colspan="2"><button type="button" onclick="checkValue()"> 회원가입 </button></td>
 			</tr>
 		</table>
 	</form>
 <script>
-test(1);
-function test() {
-	alert("난 테스트 함수1");
-}
-function test() {
-	alert("난 테스트 함수2");
-}
-test();
-test = 1;
-test();
-
+	function checkValue() {
+		var nameObj = document.getElementById("name");
+		if (nameObj.value.trim().length < 2) {
+			alert("이름은 2글자 이상입니다.");
+			nameObj.value = "";
+			nameObj.focus();
+			return false;
+		}
+		var nameObj = document.getElementById("birth");
+		if (nameObj.value.trim().length < 6) {
+			alert("생년월일은 6글자 이상입니다.");
+			nameObj.value = "";
+			nameObj.focus();
+			return false;
+		}
+		var nameObj = document.getElementById("email");
+		if (nameObj.value.trim().length < 6) {
+			alert("이메일은 6글자 이상입니다.");
+			nameObj.value = "";
+			nameObj.focus();
+			return false;
+		}
+		var nameObj = document.getElementById("id");
+		if (nameObj.value.trim().length < 6) {
+			alert("아이디는 6글자 이상입니다.");
+			nameObj.value = "";
+			nameObj.focus();
+			return false;
+		}
+		var nameObj = document.getElementById("pwd");
+		if (nameObj.value.trim().length < 6) {
+			alert("비밀번호는 6글자 이상입니다.");
+			nameObj.value = "";
+			nameObj.focus();
+			return false;
+		}
+	}
 </script>
 </body>
 </html>
